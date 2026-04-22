@@ -55,7 +55,7 @@ def category_donut(content_breakdown: list[dict]):
                "#1FA8D6", "#B85ED0", "#D8784D", "#5070C5"]
     fig = go.Figure(data=[go.Pie(
         labels=labels, values=values, hole=0.62,
-        marker=dict(colors=palette[:len(labels)], line=dict(color="#0F1430", width=2)),
+        marker=dict(colors=palette[:len(labels)], line=dict(color="#1E2552", width=2)),
         textfont=dict(color=TEXT),
     )])
     fig.update_layout(**LAYOUT, showlegend=True,

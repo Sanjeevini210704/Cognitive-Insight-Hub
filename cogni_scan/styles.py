@@ -3,13 +3,13 @@ CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --bg: #0F1430;
-  --bg-2: #141A3B;
-  --card: #161D40;
-  --card-2: #1B2349;
-  --border: #262E55;
-  --text: #E6E9F5;
-  --muted: #9AA3B8;
+  --bg: #1E2552;
+  --bg-2: #252D5E;
+  --card: #2A3268;
+  --card-2: #323B75;
+  --border: #404A8A;
+  --text: #F0F2FA;
+  --muted: #B5BCD0;
   --primary: #8B5DDB;
   --primary-2: #7C3AED;
   --accent: #9D6BFF;
@@ -30,7 +30,7 @@ html, body, [class*="css"], .stApp, .main {
 
 /* Sidebar */
 section[data-testid="stSidebar"] {
-  background: #0B1029 !important;
+  background: #171C44 !important;
   border-right: 1px solid var(--border);
 }
 section[data-testid="stSidebar"] * { color: var(--text); }
@@ -63,7 +63,7 @@ section[data-testid="stSidebar"] * { color: var(--text); }
 .stTextArea textarea,
 .stSelectbox div[data-baseweb="select"] > div,
 .stPasswordInput input {
-  background: #1A2148 !important;
+  background: #323B75 !important;
   border: 1px solid var(--border) !important;
   color: var(--text) !important;
   border-radius: 10px !important;
