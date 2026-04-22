@@ -138,11 +138,11 @@ def page_landing():
               <p style="color:var(--muted); margin:6px 0 18px;">Critical risk of dopamine loop dependency detected.</p>
               <div style="border-top:1px solid var(--border); padding-top:14px;">
                 <div style="margin-bottom:10px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>Attention Fragmentation</span><span style="font-family:'Space Mono',monospace;">80%</span></div>
-                  <div style="height:6px;background:#3A4385;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:80%;height:100%;background:var(--primary);"></div></div></div>
+                  <div style="height:6px;background:#EEEAFB;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:80%;height:100%;background:var(--primary);"></div></div></div>
                 <div style="margin-bottom:10px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>Anxiety Index</span><span style="font-family:'Space Mono',monospace;">68%</span></div>
-                  <div style="height:6px;background:#3A4385;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:68%;height:100%;background:var(--primary);"></div></div></div>
+                  <div style="height:6px;background:#EEEAFB;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:68%;height:100%;background:var(--primary);"></div></div></div>
                 <div><div style="display:flex;justify-content:space-between;font-size:13px;"><span>Social Comparison</span><span style="font-family:'Space Mono',monospace;">56%</span></div>
-                  <div style="height:6px;background:#3A4385;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:56%;height:100%;background:var(--primary);"></div></div></div>
+                  <div style="height:6px;background:#EEEAFB;border-radius:999px;overflow:hidden;margin-top:4px;"><div style="width:56%;height:100%;background:var(--primary);"></div></div></div>
               </div>
             </div>
             <div style="background:rgba(139,93,219,0.06); border:1px solid var(--border); border-radius:12px; padding:20px;">

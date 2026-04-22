@@ -1,16 +1,16 @@
 import plotly.graph_objects as go
 import pandas as pd
 
-PRIMARY = "#8B5DDB"
-ACCENT = "#9D6BFF"
-DESTRUCTIVE = "#D9265E"
-CHART_2 = "#5870B5"
-CHART_3 = "#1FBED6"
-CHART_4 = "#D86CA8"
-CHART_5 = "#E0944D"
-GRID = "rgba(255,255,255,0.08)"
-TEXT = "#E6E9F5"
-MUTED = "#9AA3B8"
+PRIMARY = "#7C5CE6"
+ACCENT = "#B68BFF"
+DESTRUCTIVE = "#E0365F"
+CHART_2 = "#6480D8"
+CHART_3 = "#1FB5C9"
+CHART_4 = "#E37BC4"
+CHART_5 = "#F0A05C"
+GRID = "rgba(26,27,54,0.08)"
+TEXT = "#1A1B36"
+MUTED = "#6B7191"
 CARD_BG = "rgba(0,0,0,0)"
 
 LAYOUT = dict(
@@ -55,7 +55,7 @@ def category_donut(content_breakdown: list[dict]):
                "#1FA8D6", "#B85ED0", "#D8784D", "#5070C5"]
     fig = go.Figure(data=[go.Pie(
         labels=labels, values=values, hole=0.62,
-        marker=dict(colors=palette[:len(labels)], line=dict(color="#1E2552", width=2)),
+        marker=dict(colors=palette[:len(labels)], line=dict(color="#FFFFFF", width=2)),
         textfont=dict(color=TEXT),
     )])
     layout = {**LAYOUT, "legend": dict(orientation="v", x=1.02, y=0.5,
