@@ -58,9 +58,9 @@ def category_donut(content_breakdown: list[dict]):
         marker=dict(colors=palette[:len(labels)], line=dict(color="#1E2552", width=2)),
         textfont=dict(color=TEXT),
     )])
-    fig.update_layout(**LAYOUT, showlegend=True,
-                      legend=dict(orientation="v", x=1.02, y=0.5,
-                                  font=dict(color=MUTED, size=11)))
+    layout = {**LAYOUT, "legend": dict(orientation="v", x=1.02, y=0.5,
+                                       font=dict(color=MUTED, size=11))}
+    fig.update_layout(**layout, showlegend=True)
     return fig
 
 
