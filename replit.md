@@ -1,27 +1,67 @@
-# Workspace
+# CogniScan — Cognitive Insight Hub (Python)
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+A pure-Python rebuild of the CogniScan cognitive insight platform from the
+`Sanjeevini210704/Cognitive-Insight-Hub` GitHub repo. It analyzes social-media
+consumption patterns and surfaces cognitive/emotional signals through five
+interactive charts.
 
 ## Stack
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+- **Language**: Python 3.11 (only)
+- **UI / Web framework**: Streamlit
+- **Database**: Local MongoDB-compatible store via `montydb` (PyMongo-style API,
+  persists to local SQLite files under `cogni_scan/data/`)
+- **Charts**: Plotly
+- **Auth**: bcrypt password hashing
 
-## Key Commands
+## Run
 
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
+```
+streamlit run app.py --server.port 5000
+```
 
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+The "Start application" workflow is preconfigured.
+
+## Project Layout
+
+```
+app.py                # Streamlit entry point (router + pages)
+cogni_scan/
+  db.py               # MontyDB local MongoDB connection (users, analyses)
+  auth.py             # bcrypt login/register, seed users
+  analyzer.py         # Rule-based cognitive analysis engine
+  charts.py           # 5 Plotly charts
+  data/               # Local DB files (gitignored)
+.streamlit/config.toml
+```
+
+## Demo Credentials
+
+- User:  `demo@cogniscan.ai` / `demo1234`
+- Admin: `admin@cogniscan.ai` / `admin1234`
+
+## Pages
+
+- Landing (`/`)
+- User Login + Register
+- Admin Login
+- User Dashboard — paste content, run analysis, view 5 charts, Print / New
+  Analysis / Logout
+- History — past analyses for the logged-in user
+- Admin Dashboard — totals, users table, all analyses, platform stats
+
+## Five Analysis Charts
+
+1. Radar — Cognitive Metrics (attention, anxiety, dopamine, social comparison,
+   info overload)
+2. Donut — Content category breakdown
+3. Stacked Bar — Emotional trend (positive / negative / neutral by day)
+4. Area — Engagement pattern by hour
+5. Horizontal Bar — Risk factor severity
+
+## Notes
+
+The `artifacts/` and `lib/` directories from the original Replit pnpm template
+are unused by this Python build and can be ignored.
